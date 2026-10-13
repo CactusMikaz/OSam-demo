@@ -16,6 +16,8 @@
   "db": { "rules": [ { "path": "", "read": "owner", "write": "owner" } ] },
   "sample": { "images": true },
   "user": {},
+  "assets": {},
+  "downloads": true,
   "mcp": { "servers": [ { "server": "Parallel Search", "tools": ["web_search", "web_fetch"] } ] }
 }
 ```
@@ -23,5 +25,6 @@
 - 資料規則一定要是「只有擁有者讀寫」：秘書裡會有使用者的私人資料
 - `mcp` 是給「上網查資料」用的。使用者的 claude.ai 沒有連 **Parallel Search** 連接器的話，把 `mcp` 那一項拿掉再發布，並告訴使用者：之後到 claude.ai「設定 → 連接器」連上，再請你重新部署一次就能查網路
 - `sample` 的 `images: true` 讓使用者可以傳照片給 OSam
+- `downloads: true` 讓 OSam 可以把檔案存到手機（傳真機的「存成檔案」、資料的「存一份」）；`assets` 讓 OSam 保存使用者傳的原始檔案。有 `assets` 的 Artifact 只能分享給同一個組織的人，這是正常的
 - 更新完，用 `README.md` 最上面那版的「這版改了什麼」跟使用者說一下
 - 回覆使用者用繁體中文
